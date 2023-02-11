@@ -1,0 +1,25 @@
+{
+    "name": "barques/fishingdraw",
+    "description": "",
+    "authors": [
+        {
+            "name": "Elliot Pettingale",
+            "email": "elliot@barques.co.uk"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\FishingDraw\\Providers\\FishingDrawServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\FishingDraw\\": ""
+        }
+    }
+}

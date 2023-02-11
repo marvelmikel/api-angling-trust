@@ -1,0 +1,21 @@
+.voting-question {
+
+    label {
+        font-weight: normal;
+        font-size: 1em;
+    }
+
+    &__foragainst {
+        .option {
+            display: flex;
+            align-items: center;
+
+            > div {
+                text-align: center;
+                margin-right: 1em;
+                margin-left: 1em;
+            }
+        }
+    }
+
+}

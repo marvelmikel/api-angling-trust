@@ -1,0 +1,25 @@
+{
+    "name": "barques/events",
+    "description": "",
+    "authors": [
+        {
+            "name": "Elliot Pettingale",
+            "email": "elliot@barques.co.uk"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Events\\Providers\\EventsServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Events\\": ""
+        }
+    }
+}

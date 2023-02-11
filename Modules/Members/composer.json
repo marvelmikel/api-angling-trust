@@ -1,0 +1,25 @@
+{
+    "name": "barques/members",
+    "description": "",
+    "authors": [
+        {
+            "name": "Elliot Pettingale",
+            "email": "elliot@barques.co.uk"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Members\\Providers\\MembersServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Members\\": ""
+        }
+    }
+}

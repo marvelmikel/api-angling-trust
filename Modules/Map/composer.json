@@ -1,0 +1,25 @@
+{
+    "name": "barques/map",
+    "description": "",
+    "authors": [
+        {
+            "name": "Elliot Pettingale",
+            "email": "elliot@barques.co.uk"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Map\\Providers\\MapServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Map\\": ""
+        }
+    }
+}

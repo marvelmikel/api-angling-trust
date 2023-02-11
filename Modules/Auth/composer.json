@@ -1,0 +1,25 @@
+{
+    "name": "barques/auth",
+    "description": "",
+    "authors": [
+        {
+            "name": "Elliot Pettingale",
+            "email": "elliot@barques.co.uk"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Modules\\Auth\\Providers\\AuthServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Auth\\": ""
+        }
+    }
+}

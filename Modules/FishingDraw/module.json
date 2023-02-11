@@ -1,0 +1,13 @@
+{
+    "name": "FishingDraw",
+    "alias": "fishingdraw",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\FishingDraw\\Providers\\FishingDrawServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

@@ -1,0 +1,13 @@
+{
+    "name": "Voting",
+    "alias": "voting",
+    "description": "",
+    "keywords": [],
+    "order": 0,
+    "providers": [
+        "Modules\\Voting\\Providers\\VotingServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

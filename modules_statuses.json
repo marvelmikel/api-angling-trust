@@ -1,0 +1,10 @@
+{
+    "Map": true,
+    "Events": true,
+    "Store": true,
+    "Members": true,
+    "Auth": true,
+    "Core": true,
+    "Voting": true,
+    "FishingDraw": true
+}
