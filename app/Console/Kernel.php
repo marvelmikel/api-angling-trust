@@ -8,6 +8,9 @@ use Modules\Core\Console\ExportDatabasesForGoodForm;
 use Modules\Core\Console\SendUnsentNotifications;
 use Modules\Core\Console\UpdateTicketsForUpdatedEvents;
 use Modules\Members\Console\AutoRenewMembers;
+use Modules\Members\Console\ConvertAdultMembersToSeniorCitizens;
+use Modules\Members\Console\ConvertJuniorMembersToYoungAdults;
+use Modules\Members\Console\ConvertYoungAdultMembersToAdults;
 use Modules\Members\Console\RepairMembersIndex;
 use Modules\Members\Console\SendDataToWarehouse;
 use Modules\Store\Console\UpdateSmartDebitMemberships;
@@ -20,7 +23,7 @@ class Kernel extends ConsoleKernel
      *
      * @var array
      */
-    protected $commands = [
+    protected $commands = [   
     ];
 
     /**
@@ -67,6 +70,20 @@ class Kernel extends ConsoleKernel
 
         $schedule->command(RepairMembersIndex::class)
             ->everyFifteenMinutes();
+
+
+        $schedule->command(ConvertJuniorMembersToYoungAdults::class)
+            ->twiceDaily()
+            ->withoutOverlapping();
+
+        $schedule->command(ConvertYoungAdultMembersToAdults::class)
+            ->twiceDaily()
+            ->withoutOverlapping();
+
+        $schedule->command(ConvertAdultMembersToSeniorCitizens::class)
+            ->twiceDaily()
+            ->withoutOverlapping();
+
     }
 
     /**
