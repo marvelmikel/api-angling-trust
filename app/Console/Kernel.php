@@ -10,6 +10,7 @@ use Modules\Core\Console\UpdateTicketsForUpdatedEvents;
 use Modules\Members\Console\AutoRenewMembers;
 use Modules\Members\Console\RepairMembersIndex;
 use Modules\Members\Console\SendDataToWarehouse;
+use Modules\Members\Console\MembershipAgeFix;
 use Modules\Store\Console\UpdateSmartDebitMemberships;
 use Modules\Store\Console\UpdateSmartDebitPayments;
 
@@ -21,6 +22,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
+        'Modules\Members\Console\MembershipAgeFix'
     ];
 
     /**
@@ -67,6 +69,13 @@ class Kernel extends ConsoleKernel
 
         $schedule->command(RepairMembersIndex::class)
             ->everyFifteenMinutes();
+
+        // $schedule->command(MembershipAgeFix::class)
+        //     ->withoutOverlapping()
+        //     ->everyMinute();
+
+        $schedule->command('members:membership-age-fix')
+        ->daily();
     }
 
     /**

@@ -38,6 +38,7 @@ use Modules\Members\Console\UpdateFullNameOfAllMembers;
 use Modules\Members\Console\UpdateFullNameOfMembers;
 use Modules\Members\Console\UpdateIMMemberRecordsFromImport;
 use Modules\Members\Console\UpdateORGMemberRecordsFromImport;
+use Modules\Members\Console\MembershipAgeFix;
 use Modules\Members\Entities\Member;
 use Modules\Members\Observers\MemberObserver;
 
@@ -101,7 +102,8 @@ class MembersServiceProvider extends ServiceProvider
             CheckForOutOfSyncStripeSubscriptions::class,
             FixOutOfSyncStripeMembers::class,
             FixExpiryDateDrift::class,
-            CheckExpiryDateDrift::class
+            CheckExpiryDateDrift::class,
+            MembershipAgeFix::class,
         ]);
 
         Member::observe(MemberObserver::class);
