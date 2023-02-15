@@ -13,7 +13,9 @@ use Modules\Members\Console\CheckForOutOfSyncStripeSubscriptions;
 use Modules\Members\Console\ClearAllMemberData;
 use Modules\Members\Console\ConnectImportedStripeMembers;
 use Modules\Members\Console\ConvertAdultMembersToSeniorCitizens;
+use Modules\Members\Console\ConvertJuniorMembersToYoungAdults;
 use Modules\Members\Console\ConvertOldTradeMembersToNewCategories;
+use Modules\Members\Console\ConvertYoungAdultMembersToAdults;
 use Modules\Members\Console\CreateOnboardRecordsForAllMembers;
 use Modules\Members\Console\DeleteMembersByMembershipNumber;
 use Modules\Members\Console\ExportTradeMembersWithRecurringPayments;
@@ -101,7 +103,9 @@ class MembersServiceProvider extends ServiceProvider
             CheckForOutOfSyncStripeSubscriptions::class,
             FixOutOfSyncStripeMembers::class,
             FixExpiryDateDrift::class,
-            CheckExpiryDateDrift::class
+            CheckExpiryDateDrift::class,
+            ConvertJuniorMembersToYoungAdults::class,
+            ConvertYoungAdultMembersToAdults::class
         ]);
 
         Member::observe(MemberObserver::class);
